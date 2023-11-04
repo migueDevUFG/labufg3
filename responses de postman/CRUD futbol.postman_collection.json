@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "78edc035-25d0-4d7a-a4c1-c7ce94a4d1d4",
+		"name": "CRUD futbol",
+		"description": "Este proyecto es parte del laboratorio del tercer periodo de desarrollo web avanzado de la Universidad Francisco Gavidia.\n\nMiguel Angel Flores Guzman FG100220",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15353617"
+	},
+	"item": [
+		{
+			"name": "saveEquipo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"FC Barcelona\",\n    \"jugadores\": [\n        {\n            \"nombre\": \"Messi\",\n            \"numeroCamiseta\": 10,\n            \"fechaNacimiento\": \"1990-01-01\",\n            \"equipo\": {\n                \"idEquipo\": 4\n            }\n        },\n        {\n            \"nombre\": \"Neymer\",\n            \"numeroCamiseta\": 11,\n            \"fechaNacimiento\": \"1990-01-01\",\n            \"equipo\": {\n                \"idEquipo\": 4\n            }\n        },\n        {\n            \"nombre\": \"Suarez\",\n            \"numeroCamiseta\": 9,\n            \"fechaNacimiento\": \"1990-01-01\",\n            \"equipo\": {\n                \"idEquipo\": 4\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/equipos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"equipos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listEquipos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/equipos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"equipos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEquipoById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/equipos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"equipos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEquipo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/equipos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"equipos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEquipo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idEquipo\": 4,\n    \"nombre\": \"FC Barcelona\",\n    \"jugadores\": [\n        {\n            \"nombre\": \"Messi\",\n            \"numeroCamiseta\": 10,\n            \"fechaNacimiento\": \"1990-01-01\",\n            \"equipo\": {\n                \"idEquipo\": 4\n            }\n        },\n        {\n            \"nombre\": \"Neymer\",\n            \"numeroCamiseta\": 11,\n            \"fechaNacimiento\": \"1990-01-01\",\n            \"equipo\": {\n                \"idEquipo\": 4\n            }\n        },\n        {\n            \"nombre\": \"Suarez\",\n            \"numeroCamiseta\": 9,\n            \"fechaNacimiento\": \"1990-01-01\",\n            \"equipo\": {\n                \"idEquipo\": 4\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/equipos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"equipos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
